@@ -1,7 +1,7 @@
 defmodule ElixirDiscordWeb.Bot do
   use Nostrum.Consumer
 
-  alias Nostrum.Api
+  alias ElixirDiscordWeb.MessageHandler
 
   def start_link do
     Consumer.start_link(__MODULE__)
@@ -11,19 +11,13 @@ defmodule ElixirDiscordWeb.Bot do
     start_link()
   end
 
+  # Use pattern matching to match against discord events
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
-    handle_message(msg.content, msg)
+    MessageHandler.call(msg.content, msg)
   end
 
+  # We need this fallback otherwise the app would crash
   def handle_event(_event) do
     :noop
-  end
-
-  defp handle_message("!ping", msg) do
-    Api.create_message(msg.channel_id, "pong")
-  end
-
-  defp handle_message(_, _msg) do
-    :ignore
   end
 end

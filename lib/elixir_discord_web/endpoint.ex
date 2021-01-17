@@ -18,7 +18,7 @@ defmodule ElixirDiscordWeb.Endpoint do
     send_resp(conn, 404, "")
   end
 
-  defp render(%{status: status} = conn, template, assigns \\ []) do
+  defp render(%{status: status} = conn, template, assigns) do
     body =
       @template_dir
       |> Path.join(template)

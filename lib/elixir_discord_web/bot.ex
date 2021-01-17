@@ -12,7 +12,6 @@ defmodule ElixirDiscordWeb.Bot do
   end
 
   def handle_event({:MESSAGE_CREATE, msg, _ws_state}) do
-
     handle_message(msg.content, msg)
   end
 

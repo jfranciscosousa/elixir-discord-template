@@ -3,10 +3,12 @@ defmodule ElixirDiscordBot.Bot do
 
   alias ElixirDiscordBot.MessageHandler
 
+  @spec start_link :: :ignore | {:error, any} | {:ok, pid}
   def start_link do
     Consumer.start_link(__MODULE__)
   end
 
+  @spec start(any, any) :: :ignore | {:error, any} | {:ok, pid}
   def start(_type, _args) do
     start_link()
   end

@@ -4,6 +4,10 @@ defmodule ElixirDiscordBot.MessageHandler do
   alias ElixirDiscord.{OtherPing, Ping}
 
   # Use pattern matching to handle incoming messages.
+  @spec call(any, any) ::
+          :ignore
+          | {:error, any()}
+          | {:ok, Nostrum.Struct.Message.t()}
   def call("!ping", msg) do
     Api.create_message(msg.channel_id, Ping.call())
   end

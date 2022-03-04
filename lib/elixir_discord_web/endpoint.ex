@@ -5,6 +5,7 @@ defmodule ElixirDiscordWeb.Endpoint do
   @invite_url "https://discord.com/oauth2/authorize?client_id=#{System.get_env("DISCORD_CLIENT_ID")}&scope=bot"
 
   plug(Plug.Logger)
+  plug(Plug.Static, at: "/", from: "priv/static")
   plug(:match)
   plug(:dispatch)
 

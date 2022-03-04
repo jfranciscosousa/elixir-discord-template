@@ -1,6 +1,7 @@
 defmodule ElixirDiscord do
   use Application
 
+  @spec start(any, any) :: {:error, any} | {:ok, pid}
   def start(_type, _args) do
     children = [
       Plug.Cowboy.child_spec(

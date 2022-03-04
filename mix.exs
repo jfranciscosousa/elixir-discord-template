@@ -20,8 +20,10 @@ defmodule ElixirDiscord.MixProject do
 
   defp deps do
     [
-      {:plug_cowboy, "~> 2.0"},
-      {:nostrum, "~> 0.4"}
+      {:plug_cowboy, "~> 2.5"},
+      {:nostrum, "~> 0.5"},
+      # Fix a conflict between plug_cowboy and nostrum
+      {:cowlib, "~> 2.11", hex: :remedy_cowlib, override: true}
     ]
   end
 end

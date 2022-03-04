@@ -1,7 +1,7 @@
-defmodule ElixirDiscordWeb.Bot do
+defmodule ElixirDiscordBot.Bot do
   use Nostrum.Consumer
 
-  alias ElixirDiscordWeb.MessageHandler
+  alias ElixirDiscordBot.MessageHandler
 
   def start_link do
     Consumer.start_link(__MODULE__)

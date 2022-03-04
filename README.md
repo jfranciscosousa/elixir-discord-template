@@ -1,21 +1,14 @@
 # ElixirDiscord
 
-**TODO: Add description**
+A template of a `plug` and `nostrum` application provides a discord bot and a webpage with the Discord bot link that can be deployed to Heroku directly.
 
-## Installation
+## Setup
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_discord` to your list of dependencies in `mix.exs`:
+If you have `asdf`, just run `bin/setup`. After that, you can run `bin/rename` to change the name and base module of the application.
 
-```elixir
-def deps do
-  [
-    {:elixir_discord, "~> 0.1.0"}
-  ]
-end
-```
+## Development
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_discord](https://hexdocs.pm/elixir_discord).
+`bin/server` should start the development server, both the web page and Discord bot. Make sure you have a `.envrc` file like the `.envrc.sample`.
+
+You can check the website at `localhost:4000`.
 

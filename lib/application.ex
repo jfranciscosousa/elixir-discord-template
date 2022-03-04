@@ -8,7 +8,7 @@ defmodule ElixirDiscord do
         plug: ElixirDiscordWeb.Endpoint,
         options: [port: System.get_env("PORT", "4000") |> String.to_integer()]
       ),
-      ElixirDiscordWeb.Bot
+      ElixirDiscordBot.Bot
     ]
 
     opts = [strategy: :one_for_one, name: :elixir_discord]

@@ -1,4 +1,4 @@
-defmodule ElixirDiscordWeb.MessageHandler do
+defmodule ElixirDiscordBot.MessageHandler do
   alias Nostrum.Api
 
   alias ElixirDiscord.{OtherPing, Ping}

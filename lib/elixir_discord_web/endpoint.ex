@@ -1,7 +1,7 @@
 defmodule ElixirDiscordWeb.Endpoint do
   use Plug.Router
 
-  @template_dir "lib/elixir_discord_web/templates"
+  @template_dir Path.dirname(__ENV__.file) <> "/templates"
   @invite_url "https://discord.com/oauth2/authorize?client_id=#{System.get_env("DISCORD_CLIENT_ID")}&scope=bot"
 
   plug(Plug.Logger)

@@ -12,3 +12,6 @@ If you have `asdf`, just run `bin/setup`. After that, you can run `bin/rename` t
 
 You can check the website at `localhost:4000`.
 
+## Deployment
+
+This repo is ready to be deployed to Heroku as is. It uses Elixir releases to deploy the application. Just pop the necessary environemtn variables on the Heroku dashboard and go for it!
